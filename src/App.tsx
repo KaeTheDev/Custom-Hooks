@@ -5,8 +5,8 @@ function App() {
 
   return (
     <>
-    <DebounceDemo value={""} delay={800}/>
     <PaginationDemo totalItems={200} itemsPerPage={10} initialPage={1}/>
+    <DebounceDemo value={""} delay={800}/>
     </>
   )
 }
