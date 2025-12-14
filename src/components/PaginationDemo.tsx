@@ -1,10 +1,31 @@
-export const PaginationDemo = () => {
+import usePagination from "../custom-hooks/usePagination";
+import type { PaginationDemoProps } from "../types";
+
+export const PaginationDemo: React.FC<PaginationDemoProps> = ({
+totalItems,
+itemsPerPage = 10,
+initialPage
+
+}) => {
+    // Call the hook
+    const {
+        currentPage,
+        totalPages,
+        startIndex,
+        endIndex,
+        itemsOnCurrentPage,
+        nextPage,
+        prevPage,
+        setPage,
+        canNextPage,
+        canPrevPage
+    } = usePagination(totalItems, itemsPerPage)
     return(
         <div className="flex flex-col px-4 py-4 mx-auto bg-black p-4 border rounded max-w-2xl mt-4">
             <p className="text-2xl text-white text-center">Pagination Demo</p>
             <div className="flex flex-row justify-between mb-4">
-                <p className="text-white">Items per page: Picker here</p>
-                <p className="text-white">Total Items: 123</p>
+                <p className="text-white">Items per page: {itemsPerPage}</p>
+                <p className="text-white">Total Items: {totalItems}</p>
             </div>
             <div className="flex flex-col mb-5">
                 <p className="text-white">1. Item 1</p>
@@ -19,12 +40,12 @@ export const PaginationDemo = () => {
                 <p className="text-white">10. Item 10</p>
             </div>
             <div className="flex flex-row justify-between mb-5">
-                <button className="text-white">Previous</button>
-                <p className="text-white">Page 1 of 13(Picker)</p>
-                <button className="text-white">Next</button>
+                <button className="text-white" onClick={prevPage} disabled={!canPrevPage}>Previous</button>
+                <p className="text-white">Page {currentPage} of {totalPages}(Picker)</p>
+                <button className="text-white" onClick={nextPage} disabled={!canNextPage}>Next</button>
             </div>
             <div className="flex flex-row justify-center">
-                <p className="text-white mb-2">Showing Items 1 - 10 (Total on this page: 10)</p>
+                <p className="text-white mb-2">Showing Items {startIndex + 1} - {endIndex} (Total on this page: {itemsOnCurrentPage})</p>
             </div>
             <div className="flex flex-row justify-center">
             <button className="bg-white text-center mr-2 px-3 py-1 border-2">1</button>
