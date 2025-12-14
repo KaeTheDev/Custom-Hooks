@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-    <DebounceDemo />
+    <DebounceDemo value={""} delay={800}/>
     <PaginationDemo totalItems={200} itemsPerPage={10} initialPage={1}/>
     </>
   )

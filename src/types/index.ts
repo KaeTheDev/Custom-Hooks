@@ -5,6 +5,6 @@ export interface PaginationDemoProps {
 }
 
 export interface DebounceDemoProps {
-    value: number;
+    value: string;
     delay: number;
 }
