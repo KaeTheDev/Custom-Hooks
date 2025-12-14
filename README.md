@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+#  React Lab – Custom Hooks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Overview
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Workplace Context
 
-## React Compiler
+##  Learning Objectives
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## Expanding the ESLint configuration
+##  Description
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This lab focuses on:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Resources
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*  React Docs — https://react.dev
+*  TypeScript Handbook — https://www.typescriptlang.org/docs
+*  React Hooks Guide — Official Documentation
+*  TypeScript + React Cheatsheets (recommended)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+##  Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##  Requirements
+
+*  Node.js v24+
+*  npm
+*  Git
+*  A code editor (VS Code recommended)
+*  TypeScript
+*  React
+
+##  OS Compatibility
+
+This lab works on:
+
+*  Windows
+*  macOS
+*  Linux
+
+##  Installation
+
+1. Clone the repository:
+
+git clone [<repository-url>](https://github.com/KaeTheDev/Custom-Hooks.git)
+
+2. Navigate into the project folder:
+
+cd custom-hooks
+
+##  Setup
+
+1. Install dependencies:
+
+npm install
+
+2. Run the project:
+
+npm run dev
+
+##  Project Structure
+
+
+
+*  components/ — Contains all React components used in the app.
+*  types/ — Shared TypeScript types/interfaces used across components.
