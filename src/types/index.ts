@@ -3,3 +3,8 @@ export interface PaginationDemoProps {
     itemsPerPage?: number;
     initialPage?: number;
 }
+
+export interface DebounceDemoProps {
+    value: number;
+    delay: number;
+}

@@ -1,11 +1,12 @@
+import { DebounceDemo } from "./components/DebounceDemo"
 import { PaginationDemo } from "./components/PaginationDemo"
 
 function App() {
 
   return (
     <>
-    {/* <h2 className="text-3xl text-blue-500">KaeTheDev is the GREATEST!</h2> */}
-    <PaginationDemo />
+    <DebounceDemo />
+    <PaginationDemo totalItems={200} itemsPerPage={10} initialPage={1}/>
     </>
   )
 }
